@@ -1,1 +1,1 @@
-*** SCHOOL PROJECTS ***+
+*** SCHOOL PROJECTS ***
