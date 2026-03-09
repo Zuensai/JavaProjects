@@ -15,25 +15,19 @@ public class PrimeChecker {
             return;
         }
         boolean result = isPrime(number);
-
-        // System.out.println("Input: " + number);
-        // System.out.println("Result " + result);
-        
         if (result) {
             System.out.println(number + " is a Prime Number!");
         } else {
             System.out.println(number + " is NOT a Prime Number");
         }
-        // System.out.println("0 " + isPrime(0));
-        // System.out.println("1 " + isPrime(1));
-        // System.out.println("2 " + isPrime(2));
-        // System.out.println("12 " + isPrime(12));
-        // System.out.println("-1 " + isPrime(-1));
-        }
+       }
 
     public static boolean isPrime(int number) { //methode true/false is boolean met input Int
             if (number < 2) return false;
-            for (int i = 2; i < number; i++) { //start with 2 (prime), first prime then stop 1 early because always true
+            if (number == 2) return false; //more speed
+            if (number % 2 == 0) return false; //more speed
+            // for (int i = 2; i < number; i++) {
+            for (int i = 3; i * i <= number; i+=2) { //more speed
                 if (number % i == 0) return false;
             }
             return true;
